@@ -1,0 +1,49 @@
+2023-04-12T08:33:37.739+07:00  INFO 33112 --- [main] i.c.f.t.customer.CustomerApplication     : Starting CustomerApplication using Java 17.0.5 with PID 33112 (C:\Users\u073459\Desktop\Training\Spring Boot Training\Codes\fun_travel_customer\target\classes started by U073459 in C:\Users\u073459\Desktop\Training\Spring Boot Training\Codes\fun_travel_customer)
+2023-04-12T08:33:37.743+07:00  INFO 33112 --- [main] i.c.f.t.customer.CustomerApplication     : No active profile set, falling back to 1 default profile: "default"
+2023-04-12T08:33:38.594+07:00  INFO 33112 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-04-12T08:33:38.627+07:00  INFO 33112 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 0 JDBC repository interfaces.
+2023-04-12T08:33:39.374+07:00  INFO 33112 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2023-04-12T08:33:39.386+07:00  INFO 33112 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-12T08:33:39.387+07:00  INFO 33112 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-04-12T08:33:39.543+07:00  INFO 33112 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-12T08:33:39.544+07:00  INFO 33112 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1735 ms
+2023-04-12T08:33:39.655+07:00  WARN 33112 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customerController': Unsatisfied dependency expressed through field 'customerRepository': No qualifying bean of type 'repository.id.co.travel.fun.customer.CustomerRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2023-04-12T08:33:39.663+07:00  INFO 33112 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-04-12T08:33:39.693+07:00  INFO 33112 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-04-12T08:33:39.723+07:00 ERROR 33112 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field customerRepository in controller.id.co.travel.fun.customer.CustomerController required a bean of type 'repository.id.co.travel.fun.customer.CustomerRepository' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'repository.id.co.travel.fun.customer.CustomerRepository' in your configuration.
+
+2023-04-12T08:34:46.833+07:00  INFO 51376 --- [main] i.c.f.t.customer.CustomerApplication     : Starting CustomerApplication using Java 17.0.5 with PID 51376 (C:\Users\u073459\Desktop\Training\Spring Boot Training\Codes\fun_travel_customer\target\classes started by U073459 in C:\Users\u073459\Desktop\Training\Spring Boot Training\Codes\fun_travel_customer)
+2023-04-12T08:34:46.839+07:00  INFO 51376 --- [main] i.c.f.t.customer.CustomerApplication     : No active profile set, falling back to 1 default profile: "default"
+2023-04-12T08:34:47.878+07:00  INFO 51376 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-04-12T08:34:47.926+07:00  INFO 51376 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 0 JDBC repository interfaces.
+2023-04-12T08:34:48.854+07:00  INFO 51376 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2023-04-12T08:34:48.868+07:00  INFO 51376 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-12T08:34:48.869+07:00  INFO 51376 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-04-12T08:34:49.069+07:00  INFO 51376 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-12T08:34:49.070+07:00  INFO 51376 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2151 ms
+2023-04-12T08:34:49.821+07:00  INFO 51376 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-12T08:34:50.109+07:00  INFO 51376 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@25be445f
+2023-04-12T08:34:50.111+07:00  INFO 51376 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-12T08:34:50.325+07:00  INFO 51376 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2023-04-12T08:34:50.339+07:00  INFO 51376 --- [main] i.c.f.t.customer.CustomerApplication     : Started CustomerApplication in 4.224 seconds (process running for 4.914)
+2023-04-12T08:35:21.161+07:00  INFO 51376 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-12T08:35:21.162+07:00  INFO 51376 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-12T08:35:21.164+07:00  INFO 51376 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms

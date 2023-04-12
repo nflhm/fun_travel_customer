@@ -1,6 +1,6 @@
-package id.co.fun.travel.customer.repository;
+package id.co.travel.fun.customer.repository;
 
-import id.co.fun.travel.customer.model.Customer;
+import id.co.travel.fun.customer.model.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.*;

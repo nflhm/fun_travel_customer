@@ -1,7 +1,7 @@
-package id.co.fun.travel.customer.controller;
+package id.co.travel.fun.customer.controller;
 
-import id.co.fun.travel.customer.model.Customer;
-import id.co.fun.travel.customer.repository.CustomerRepository;
+import id.co.travel.fun.customer.model.Customer;
+import id.co.travel.fun.customer.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

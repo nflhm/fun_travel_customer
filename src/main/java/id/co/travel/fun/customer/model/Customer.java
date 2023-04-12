@@ -1,4 +1,4 @@
-package id.co.fun.travel.customer.model;
+package id.co.travel.fun.customer.model;
 
 public class Customer {
     private int customerId;

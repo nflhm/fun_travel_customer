@@ -8,7 +8,7 @@
 		<version>3.0.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>id.co.fun.travel</groupId>
+	<groupId>id.co.travel.fun</groupId>
 	<artifactId>customer</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>customer</name>

@@ -1,4 +1,4 @@
-package id.co.fun.travel.customer;
+package id.co.travel.fun.customer;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

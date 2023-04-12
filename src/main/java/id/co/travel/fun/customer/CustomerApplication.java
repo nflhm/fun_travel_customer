@@ -1,4 +1,4 @@
-package id.co.fun.travel.customer;
+package id.co.travel.fun.customer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
