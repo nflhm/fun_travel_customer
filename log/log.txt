@@ -47,3 +47,5 @@ Consider defining a bean of type 'repository.id.co.travel.fun.customer.CustomerR
 2023-04-12T08:35:21.161+07:00  INFO 51376 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2023-04-12T08:35:21.162+07:00  INFO 51376 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2023-04-12T08:35:21.164+07:00  INFO 51376 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-04-12T08:59:43.729+07:00  INFO 51376 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-12T08:59:43.745+07:00  INFO 51376 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

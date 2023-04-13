@@ -1,11 +1,25 @@
 package id.co.travel.fun.customer.model;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "customer")
 public class Customer {
+    @Id
+    @Column(name = "customer_id")
     private int customerId;
+    @Column(name = "username")
     private String username;
+    @Column(name = "name")
     private String name;
+    @Column(name = "password")
     private String password;
+    @Column(name = "email")
     private String email;
+    @Column(name = "delete_flag")
     private int deleteFlag;
     public Customer() {
     }
