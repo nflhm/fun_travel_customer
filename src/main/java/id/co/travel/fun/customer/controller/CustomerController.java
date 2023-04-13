@@ -1,13 +1,11 @@
 package id.co.travel.fun.customer.controller;
 
 import id.co.travel.fun.customer.model.Customer;
-import id.co.travel.fun.customer.repository.CustomerRepository;
+import id.co.travel.fun.customer.repository.ICustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -15,36 +13,32 @@ import java.util.List;
 @RequestMapping("customer")
 public class CustomerController {
     @Autowired
-    CustomerRepository customerRepository;
+    ICustomerRepository customerRepository;
     @GetMapping("/")
-    public @ResponseBody List<Customer> selectAll() { return customerRepository.selectAll(); }
-    @GetMapping("/find")
-    public @ResponseBody Customer selectUnique(@RequestParam("id") int id) {
-        return customerRepository.selectUnique(id);
+    @ResponseStatus(HttpStatus.OK)
+    public @ResponseBody List<Customer> findAll() { return customerRepository.findAllByOrderByCustomerId(); }
+    @GetMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public @ResponseBody Customer findCustomerByCustomerId(@PathVariable("id") int id) {
+        return customerRepository.findCustomerByCustomerId(id);
     }
-    @GetMapping("/add")
-    public String addCustomer(@RequestParam("username") String username,
-                              @RequestParam("name") String name,
-                              @RequestParam("password") String password,
-                              @RequestParam("email") String email) {
-        Customer customer = new Customer(0, username, name, password, email, 0);
-        customerRepository.add(customer);
-        return "redirect:/customer/";
+    @PostMapping("/")
+    @ResponseStatus(HttpStatus.OK)
+    public Customer addCustomer(@RequestBody Customer customer) {
+        return customerRepository.save(customer);
     }
-    @GetMapping("/update")
-    public String updateCustomer(@RequestParam("id") int id,
-                                 @RequestParam("username") String username,
-                                 @RequestParam("name") String name,
-                                 @RequestParam("password") String password,
-                                 @RequestParam("email") String email) {
-        Customer modcustomer = new Customer(id, username, name, password, email, 0);
-        customerRepository.update(modcustomer);
-        return "redirect:/customer/";
+    @PutMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public Customer updateCustomer(@RequestBody Customer customer, @PathVariable("id") int id) {
+        customer.setCustomerId(id);
+        return customerRepository.save(customer);
     }
 
-    @GetMapping("/delete")
-    public String deleteEmployee(@RequestParam("id") int id) {
-        customerRepository.delete(id);
-        return "redirect:/customer/";
+    @PutMapping("/delete/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public Customer deleteCustomer(@RequestBody Customer customer, @PathVariable("id") int id) {
+        customer.setCustomerId(id);
+        customer.setDeleteFlag(1);
+        return customerRepository.save(customer);
     }
 }
