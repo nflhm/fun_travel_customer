@@ -1,5 +1,6 @@
 package id.co.travel.fun.customer.model;
 
+import id.co.travel.fun.customer.req.CustomerReq;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -31,6 +32,15 @@ public class Customer {
         this.password = password;
         this.email = email;
         this.deleteFlag = deleteFlag;
+    }
+
+    public Customer(CustomerReq req) {
+        this.customerId = req.getCustomerId();
+        this.username = req.getUsername();
+        this.name = req.getName();
+        this.password = req.getPassword();
+        this.email = req.getEmail();
+        this.deleteFlag = req.getDeleteFlag();
     }
 
     public int getCustomerId() {
