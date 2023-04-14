@@ -2,4 +2,4 @@
 
 Spring Boot Training Project - Customer
 
-Handles Customer CRUD
+Handles Customer Data CRUD
